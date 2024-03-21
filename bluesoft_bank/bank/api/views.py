@@ -1,27 +1,46 @@
 from rest_framework import generics
-from bank.models import *
-from .serializers import *
+from bank.models import Client, Account, Transaction
+from .serializers import ClientSerializer, AccountSerializer, TransactionSerializer
+from typing import Any
 
 class ClientList(generics.ListCreateAPIView):
-    queryset = Client.objects.all()
-    serializer_class = ClientSerializer
+    """
+    View for listing and creating clients.
+    """
+    queryset: Any = Client.objects.all()
+    serializer_class: Any = ClientSerializer
 
 class ClientDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Client.objects.all()
-    serializer_class = ClientSerializer
+    """
+    View for retrieving, updating and deleting a client.
+    """
+    queryset: Any = Client.objects.all()
+    serializer_class: Any = ClientSerializer
 
 class AccountList(generics.ListCreateAPIView):
-    queryset = Account.objects.all()
-    serializer_class = AccountSerializer
+    """
+    View for listing and creating accounts.
+    """
+    queryset: Any = Account.objects.all()
+    serializer_class: Any = AccountSerializer
 
 class AccountDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Account.objects.all()
-    serializer_class = AccountSerializer
+    """
+    View for retrieving, updating and deleting an account.
+    """
+    queryset: Any = Account.objects.all()
+    serializer_class: Any = AccountSerializer
 
 class TransactionList(generics.ListCreateAPIView):
-    queryset = Transaction.objects.all()
-    serializer_class = TransactionSerializer
+    """
+    View for listing and creating transactions.
+    """
+    queryset: Any = Transaction.objects.all()
+    serializer_class: Any = TransactionSerializer
 
 class TransactionDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Transaction.objects.all()
-    serializer_class = TransactionSerializer
+    """
+    View for retrieving, updating and deleting a transaction.
+    """
+    queryset: Any = Transaction.objects.all()
+    serializer_class: Any = TransactionSerializer

@@ -2,7 +2,7 @@ from django.test import TestCase
 from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APIClient
-from models import *
+from models import Client, Account, Transaction
 from typing import Any, Dict
 
 class ClientTests(TestCase):
