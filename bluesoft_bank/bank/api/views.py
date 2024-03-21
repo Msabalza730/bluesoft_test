@@ -1,6 +1,6 @@
 from rest_framework import generics
-from models import *
-from serializers import *
+from bank.models import *
+from .serializers import *
 
 class ClientList(generics.ListCreateAPIView):
     queryset = Client.objects.all()
