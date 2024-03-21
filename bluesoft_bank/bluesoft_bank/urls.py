@@ -20,5 +20,5 @@ from bank.api.urls import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('bank.api.urls'))
+    path('api/', include("bank.api.urls"))
 ]
